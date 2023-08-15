@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Firebase Auth",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "https://www.googleapis.com/*",
+        "https://identitytoolkit.googleapis.com/*"
+    ],
+    "sandbox": {
+        "pages": ["https://www.gstatic.com/*"]
+    },
+    "content_security_policy": {
+        "extension_pages": "sandbox allow-scripts; script-src 'self'; object-src 'self'"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
